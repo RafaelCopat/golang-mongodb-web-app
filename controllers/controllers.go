@@ -33,6 +33,9 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 		}
 
 		quantidadeConvertida, err := strconv.Atoi(quantidade)
+		if err != nil {
+			log.Println("Erro na converção de quantidade")
+		}
 
 		db.CriarNovoProduto(nome, descricao, precoConvertido, quantidadeConvertida)
 	}
