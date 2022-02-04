@@ -36,13 +36,16 @@
                             <td>{{.Descricao}}</td>
                             <td>{{.Preco}}</td>
                             <td>{{.Quantidade}}</td>
+                            <td><button onclick="onDelete('{{.Id}}')" class="btn btn-danger">Deletar</button></td>
                         </tr>
                         {{end}}
                     </tbody>
                 </table>
             </div>
         </section>
-
+        <div class="card-footer">
+            <a href="/new" class="btn btn-primary mb-2">Criar novo produto</a>
+        </div>
     </div>
 </body>
 
