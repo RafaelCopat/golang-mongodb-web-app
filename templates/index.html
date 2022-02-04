@@ -27,6 +27,7 @@
                             <th>Descrição</th>
                             <th>Preço</th>
                             <th>Quantidade</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,9 +37,7 @@
                             <td>{{.Descricao}}</td>
                             <td>{{.Preco}}</td>
                             <td>{{.Quantidade}}</td>
-                            <td><button onclick="onDelete('{{.Id}}')" class="btn btn-danger">Deletar</button></td>
-                        </tr>
-                        {{end}}
+                            <td><a href="/delete?id={{.id}}" class="btn btn-danger">Deletar</a></td>                         {{end}}
                     </tbody>
                 </table>
             </div>
